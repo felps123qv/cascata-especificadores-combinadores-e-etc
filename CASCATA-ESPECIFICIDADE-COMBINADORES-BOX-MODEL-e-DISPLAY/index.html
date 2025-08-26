@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASCATA, ESPECIFICIDADE, COMBINADORES, BOX MODEL e DISPLAY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="Titulo principal">CASCATA, ESPECIFICIDADE e COMBINADORES</h1>
+        <nav>
+            <a href="#Cascata"> Ir para a regra da cascata</a>
+            <a href="#Especificidade">Ir para a regra da especificidade</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <section>
+            <div id="Cascata">
+                <h2>Regra da cascata</h2>
+                <h3>A regra da cascata consiste em selecionar o ultimo seletor, de cima para baixo</h3>
+                <a href="./Cascata 2025-08-25 192933.png" target="_blank">exemplo</a>
+            </div>
+        </section>
+
+        <section>
+            <div id="Especificidade">
+                <h2>Regra da especificidade</h2>
+                <h3>A regra da especificidade consiste em dar mais peso para o elemento mais específico independente da
+                ordem deles.</h3>
+
+                <h4>Seletor pela tag:</h4>
+                <p>A especificidade do seletor pela tag é baixa (1), tendo menos peso para o site.</p>
+
+                <h4>Seletor pela classe:</h4>
+                <p>A especificidade do seletor pela classe já é maior, tendo peso 10 para o site.</p>
+
+                 <h4>Seletor pelo id:</h4> 
+                <p>A especificidade do seletor pelo id é ainda mais específico tendo peso 100 para o site.</p>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h2>Combinadores</h2>
+                <h3>A combinação de seletores consiste basicamente em combinar elementos com especificidades diferentes para obter estilos mais específicos.</h3>
+
+                <h4>Combinação com espaço <mark>(.primeiro h1)</mark></h4>
+                
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
