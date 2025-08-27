@@ -14,43 +14,243 @@
         <nav>
             <a href="#Cascata"> Ir para a regra da cascata</a>
             <a href="#Especificidade">Ir para a regra da especificidade</a>
+            <a href="#Combinadores">Ir para a regra dos combinadores</a>
+            <a href="#Pseudo-classes">Ir para as Pseudo-classes</a>
+            <a href="#Display-block e Display-inline">Ir para o Display</a>
+            <a href="#Propriedades margin, padding e border">Ir para Propriedades margin, padding e border</a>
+            <a href="#Shorthand">Ir para Shorthand</a>
         </nav>
-
     </header>
 
     <main>
-        <section>
-            <div id="Cascata">
+        <section id="Cascata">
+            <div>
                 <h2>Regra da cascata</h2>
                 <h3>A regra da cascata consiste em selecionar o ultimo seletor, de cima para baixo</h3>
-                <a href="./Cascata 2025-08-25 192933.png" target="_blank">exemplo</a>
+                <img src="http://127.0.0.1:5500/CASCATA-ESPECIFICIDADE-COMBINADORES-BOX-MODEL-e-DISPLAY/Cascata%202025-08-25%20192933.png" alt="">
             </div>
         </section>
 
-        <section>
-            <div id="Especificidade">
+        <section id="Especificidade">
+            <div>
                 <h2>Regra da especificidade</h2>
                 <h3>A regra da especificidade consiste em dar mais peso para o elemento mais específico independente da
                 ordem deles.</h3>
+            </div>
 
+            <div>
                 <h4>Seletor pela tag:</h4>
                 <p>A especificidade do seletor pela tag é baixa (1), tendo menos peso para o site.</p>
-
+            </div>
+                
+            <div>
                 <h4>Seletor pela classe:</h4>
                 <p>A especificidade do seletor pela classe já é maior, tendo peso 10 para o site.</p>
-
-                 <h4>Seletor pelo id:</h4> 
-                <p>A especificidade do seletor pelo id é ainda mais específico tendo peso 100 para o site.</p>
             </div>
+                
+            <div>
+                <h4>Seletor pelo id:</h4> 
+                <p>A especificidade do seletor pelo id é ainda mais específico tendo peso 100 para o site.</p>
+            </div>  
         </section>
 
-        <section>
+        <section id="Combinadores">
             <div>
                 <h2>Combinadores</h2>
                 <h3>A combinação de seletores consiste basicamente em combinar elementos com especificidades diferentes para obter estilos mais específicos.</h3>
+            </div>
 
-                <h4>Combinação com espaço <mark>(.primeiro h1)</mark></h4>
+                <div>
+                    <h4>Combinação com espaço <mark>(.primeiro h1)</mark></h4>
+                <p>A combinação com espaço basicamente pega todo o elemento que estiver dentro da div "primeiro" aplicando as modificações neles.</p>
+                </div>
                 
+                <div>
+                <h4>Combinação de filho <mark>(.primeira > h1)</mark></h4>
+                <p>A combinação de filho aplica as modificações somente ao primeiro elemento que está imediatamente dentro da div "primeira", não aplicando em elementos que sejam netos ou bisnetos.</p>
+                </div>
+                
+                <div>
+                    <h4>Combinação de soma <mark>(.primeira h1 + h1)</mark></h4>
+                <p>Essa combinação serve para estilizar somente o h1 que em que antes dele tenha outro h1.</p>
+                </div>
+        </section>
+
+        <section id="Pseudo-classes">
+            <div>
+                <h2>Pseudo-classes</h2>
+                <h3>São “palavras-chave” que você adiciona a um seletor para aplicar estilos a um estado específico de um elemento.</h3>
+            </div>
+
+            <div>
+                <h4>first-child</h4>
+                <p>Estiliza somente o primeiro filho da div.</p>
+            </div>
+
+            <div>
+                <h4>Last-child</h4>
+                <p>Estiliza somente o último filho da div.</p>
+            </div>
+
+            <div>
+                <h4>nth-child()</h4>
+                <p>Estiliza o número do filho que estiver entre os parênteses</p>
+            </div>
+
+            <div>
+                <h4>nth-of-type()</h4>
+                <p>Tem a mesma função do nth-child.</p>
+            </div>
+        </section>
+
+        <div>
+            <h2>Box model</h2>
+            <img src="https://www.washington.edu/accesscomputing/webd2/student/unit3/images/boxmodel.gif" alt="Box model">
+        </div>
+
+
+        <section id="Display-block e Display-inline">
+            <div>
+                <h2>Display-block e Display-inline</h2>
+            <h3>Display-block: ocupa toda a largura disponível. Sempre quebra a linha, ou seja, o próximo elemento aparece embaixo.</h3>
+            <h3>Display-inline: ocupa apenas o espaço necessário ao seu conteúdo. Não quebra a linha, fica lado a lado com outros elementos.</h3>
+                </div>
+            <div>
+                <h4>Em elementos block:</h4>
+                <h5>Pode definir:</h5>
+                <ul>
+                    <li><strong>width</strong> (largura)</li>
+                    <li><strong>height</strong> (altura)</li>
+                    <li><strong>margin</strong> em todos os lado</li>
+                    <li><strong>padding</strong> em todos os lados</li>
+                </ul>
+
+                <h5>Resumo: block respeita largura, altura e espaçamentos verticais e horizontais.</h5>
+            </div>
+            
+            <div>
+                <h4>Em elementos inline:</h4>
+                <h5>Pode definir:</h5>
+                <ul>
+                    <li><strong>padding-top e padding-bottom</strong> até funcionam, mas podem "empurrar" o texto em vez de expandir como em um block.</li>
+                    <li><strong>margin-left e margin-right</strong> funcionam normalmente.</li>
+                </ul>
+
+                <h5>Não aceita:</h5>
+                <ul>
+                    <li><strong>width nem height</strong></li>
+                    <li><strong>margin-top e margin-bottom</strong></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Elementos display-block por padrão</h4>
+
+                <h5>Estrutura de layout:</h5>
+                <ul>
+                    <li>div, section, header, footer, nav, main</li>
+                </ul>
+
+                <h5>Títulos e textos:</h5>
+                <ul>
+                    <li>h1 até h6 e p</li>
+                </ul>
+
+                <h5>Listas:</h5>
+                <ul>
+                    <li>ul, ol, li</li>
+                </ul>
+            </div>
+
+            <div>
+               <h4>Elementos display-inline por padrão:</h4> 
+
+               <h5>texto:</h5>
+                <ul>
+                    <li>span, a, strong, em, small, mark, sub, sup</li>
+                </ul>
+
+                <h5>Formulários:</h5>
+                <ul>
+                    <li>label, input, select, textarea</li>
+                </ul>
+
+                <h5>Outros:</h5>
+                <ul>
+                    <li>br</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="Propriedades margin, padding e border">
+            <div>
+                <h2>Propriedades margin, padding e border</h2>
+                <h3>Margin:</h3>
+                <h4>É o espaço externo entre o elemento e os vizinhos.</h4>
+                <ul>
+                    <li>Pode ser positivo (afasta) ou negativo (aproxima).</li>
+                    <li>Não altera o tamanho da caixa, só a distância.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Padding</h3>
+                <h4>É o espaço interno, entre o conteúdo e a borda.</h4>
+                <ul>
+                    <li>Aumenta a área clicável.</li>
+                    <li>Aumenta o tamanho visual da caixa, mas não o conteúdo em si.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Border</h3>
+                <h4>É a borda da caixa.</h4>
+                <ul>
+                    <li>Aceita largura (border-width), estilo (border-style) e cor (border-color).</li>
+                    <li>Também aumenta o tamanho visual da caixa.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="Shorthand">
+            <div>
+                <h2>Shorthand para Margin e Padding</h2>
+                <h3>Eles aceitam até 4 valores, aplicados em ordem top → right → bottom → left (sentido horário).</h3>
+                <h4>1 Valor:</h4>
+                <img src="http://127.0.0.1:5500/CASCATA-ESPECIFICIDADE-COMBINADORES-BOX-MODEL-e-DISPLAY/1valor%202025-08-26%20222620.png" alt="">
+                <h4>2 Valores</h4>
+                <img src="http://127.0.0.1:5500/CASCATA-ESPECIFICIDADE-COMBINADORES-BOX-MODEL-e-DISPLAY/2valores%202025-08-26%20223159.png" alt="">
+                <h4>3 Valores</h4>
+               <img src="http://127.0.0.1:5500/CASCATA-ESPECIFICIDADE-COMBINADORES-BOX-MODEL-e-DISPLAY/3valores%202025-08-26%20223450.png" alt="">
+                <h4>4 Valores</h4>
+                <img src="http://127.0.0.1:5500/CASCATA-ESPECIFICIDADE-COMBINADORES-BOX-MODEL-e-DISPLAY/4valores%202025-08-26%20223547.png" alt="">
+            </div>
+
+            <div>
+                <h2>Shorthand para Border</h2>
+                <h3>A shorthand pode incluir largura, estilo e cor, em qualquer ordem:</h3>
+                <img src="http://127.0.0.1:5500/CASCATA-ESPECIFICIDADE-COMBINADORES-BOX-MODEL-e-DISPLAY/Border%202025-08-26%20224320.png" alt="">
+            </div>
+
+            <div>
+                <h2>Sufixos</h2>
+                <ul>
+                    <li><strong><em>margin-block</em>(engloba início e fim do eixo block)</strong></li>
+                    <li><strong><em>margin-inline</em>(engloba início e fim do eixo inline)</strong></li>
+                    <li><strong><em>margin-top, margin-right, margin-bottom, margin-left</em></strong></li>
+                    <li><strong><em>padding-top, padding-right, padding-bottom, padding-left</em></strong></li>
+                    <li><strong><em>border-top, border-right, border-bottom, border-left</em></strong></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>box-sizing: border-box</h2>
+                <ul>
+                    <li>width = conteúdo + padding + border</li>
+                    <li>Ou seja: o tamanho final NÃO aumenta.</li>
+                    <li>Muito usado porque facilita o layout.</li>
+                </ul>
+                <img src="./boxsizing 2025-08-26 231935.png" alt="">
             </div>
         </section>
     </main>
